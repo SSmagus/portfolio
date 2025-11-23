@@ -76,9 +76,6 @@ const ACHIEVEMENTS = [
   }
 ];
 
-
-
-
 const PROJECTS = [
   {
     id: "LeetHost",
@@ -219,29 +216,19 @@ const VideoModal = ({ video, onClose }) => {
 };
 
 export default function IDEPortfolio() {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      return (
-        localStorage.getItem("theme") === "dark" ||
-        (!localStorage.getItem("theme") &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      );
-    }
-    return false;
-  });
+  // 🔥 Always start in light mode
+  const [darkMode, setDarkMode] = useState(false);
 
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const [activeSection, setActiveSection] = useState("readme");
   const [videoPreview, setVideoPreview] = useState(null);
 
-  // Toggle Theme Logic
+  // Just toggle class on <html>, no localStorage
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
     }
   }, [darkMode]);
 
