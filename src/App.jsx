@@ -146,9 +146,8 @@ const FadeInSection = ({ children, delay = "0ms" }) => {
     <div
       ref={ref}
       style={{ transitionDelay: delay }}
-      className={`transition-all duration-1000 ease-out transform ${
-        onScreen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+      className={`transition-all duration-1000 ease-out transform ${onScreen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
     >
       {children}
     </div>
@@ -159,19 +158,17 @@ const FileTreeItem = ({ icon: Icon, label, isActive, onClick, indent = false, co
   <button
     onClick={onClick}
     className={`w-full flex items-center gap-2 px-3 py-2 text-sm transition-all rounded-md mx-2 max-w-[90%] font-medium group
-      ${
-        isActive
-          ? "bg-amber-100 text-amber-900 dark:bg-amber-900/30 dark:text-amber-100 translate-x-1"
-          : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 hover:translate-x-1"
+      ${isActive
+        ? "bg-amber-100 text-amber-900 dark:bg-amber-900/30 dark:text-amber-100 translate-x-1"
+        : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-200 hover:translate-x-1"
       }
       ${indent ? "pl-8" : "pl-4"}
     `}
   >
     <Icon
       size={16}
-      className={`${
-        isActive ? "text-amber-600 dark:text-amber-400" : colorClass
-      } transition-transform group-hover:scale-110`}
+      className={`${isActive ? "text-amber-600 dark:text-amber-400" : colorClass
+        } transition-transform group-hover:scale-110`}
     />
     <span className={isActive ? "font-bold" : ""}>{label}</span>
   </button>
@@ -241,9 +238,8 @@ export default function IDEPortfolio() {
 
   return (
     <div
-      className={`min-h-screen flex transition-colors duration-300 font-sans ${
-        darkMode ? "dark bg-[#1a1b26]" : "bg-[#f8f9fa]"
-      }`}
+      className={`min-h-screen flex transition-colors duration-300 font-sans ${darkMode ? "dark bg-[#1a1b26]" : "bg-[#f8f9fa]"
+        }`}
     >
       {/* Custom Styles for Animations */}
       <style>{`
@@ -443,13 +439,14 @@ export default function IDEPortfolio() {
 
                   <div className="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed text-lg md:text-xl mb-10 font-medium">
                     <p>
-                      I engineer{" "}
+                      I specialize in designing{" "}
                       <span className="bg-yellow-200 dark:bg-yellow-900/40 px-1 rounded text-slate-900 dark:text-white">
-                        high-performance backend systems
+                        scalable backend systems
                       </span>{" "}
-                      that scale. Currently a Knight on LeetCode with a passion for optimizing
-                      algorithms and database architecture.
+                      with a focus on performance optimization, algorithmic efficiency, and robust
+                      database architecture — backed by experience in competitive programming.
                     </p>
+
                   </div>
 
                   <div className="flex flex-wrap gap-3 mb-12">
