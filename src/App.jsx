@@ -34,7 +34,7 @@ const PERSONAL_INFO = {
   socials: {
     github: "https://github.com/SSmagus",
     linkedin: "https://www.linkedin.com/in/saumya-dhakad-100x/",
-    resume: "/resume.pdf"
+    resume: import.meta.env.BASE_URL + "resume.pdf"
   }
 };
 
@@ -87,7 +87,7 @@ const PROJECTS = [
     description: "Spring Boot backend for LeetCode tracking. Integrates GraphQL APIs, Elo rating, and secure verification.",
     tech: ["Spring Boot", "MySQL", "GraphQL"],
     featured: true,
-    video: "/endR.mp4",
+    video: import.meta.env.BASE_URL + "endR.mp4",
     repo: "https://github.com/SSmagus/Leetcode-Discord-Bot"
   },
   {
