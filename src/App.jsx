@@ -81,7 +81,8 @@ const PROJECTS = [
     id: "LeetHost",
     ext: ".java",
     color: "text-orange-500",
-    description: "Spring Boot backend for LeetCode tracking. Integrates GraphQL APIs, Elo rating, and secure verification.",
+    description:
+      "Spring Boot backend for competitive programming tracking. Integrates LeetCode APIs, Elo-style rating, and secure user verification.",
     tech: ["Spring Boot", "MySQL", "GraphQL"],
     featured: true,
     video: import.meta.env.BASE_URL + "endR.mp4",
@@ -91,13 +92,37 @@ const PROJECTS = [
     id: "OTP_Auth",
     ext: ".java",
     color: "text-orange-500",
-    description: "Secure email-based authentication system with time-bound JWT tokens, Redis caching, and BCrypt hashing.",
+    description:
+      "Email-based authentication service using time-bound JWT tokens, Redis-backed OTP caching, and BCrypt password hashing.",
     tech: ["Spring Security", "Redis", "JavaMail"],
     featured: false,
     video: null,
     repo: "https://github.com/SSmagus/email-auth-service"
+  },
+  {
+    id: "VectorDB",
+    ext: ".cpp",
+    color: "text-blue-500",
+    description:
+      "Vector similarity search engine built from scratch in C++. Supports k-NN queries, clustering-based indexing, and recall benchmarking against brute-force search.",
+    tech: ["C++", "Cosine Similarity", "Clustering", "ANN"],
+    featured: true,
+    video: null,
+    repo: "https://github.com/SSmagus/vectorDb"
+  },
+  {
+    id: "LogSearch",
+    ext: ".cpp",
+    color: "text-blue-500",
+    description:
+      "Multithreaded log search engine for large files. Implements chunk-based parallel scanning, binary-safe file reading, and boundary-aware pattern matching.",
+    tech: ["C++", "Multithreading", "File I/O", "Concurrency"],
+    featured: false,
+    video: null,
+    repo: "https://github.com/SSmagus/multithreaded-log-search"
   }
 ];
+
 
 /**
  * HELPER HOOKS & COMPONENTS
